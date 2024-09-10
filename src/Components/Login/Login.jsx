@@ -5,6 +5,8 @@ import loginImage from '../../assets/ColegioSena.webp';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+
+  const backAPI = import.meta.env.VITE_APP_BACK;
   // Estado para manejar los datos del formulario
   const [formData, setFormData] = useState({
     username: '',
@@ -30,7 +32,7 @@ const Login = () => {
     e.preventDefault();
     
     // Configura la URL de tu API
-    const url = 'http://localhost:3000/api/auth/login';
+    const url = `${backAPI}/api/auth/login`;
 
     try {
       // Realiza la solicitud POST usando async/await

@@ -4,6 +4,8 @@ import NavBar from '../Navbar/Navbar';
 import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
+    
+    const backAPI = import.meta.env.VITE_APP_BACK;
     // Estado para manejar los datos del formulario
     const [formData, setFormData] = useState({
         username: '',
@@ -25,7 +27,7 @@ const Register = () => {
         console.log('Datos del formulario:', formData);
 
         try {
-            const response = await fetch('http://localhost:3000/api/auth/register', {
+            const response = await fetch( `${backAPI}/api/auth/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
