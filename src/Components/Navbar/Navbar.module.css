@@ -1,0 +1,117 @@
+/* Contenedor principal de la NavBar */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Logo a la izquierda, contenido a la derecha */
+    align-items: center; /* Centra verticalmente */
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0; /* Navbar fija en la parte superior */
+    z-index: 1000; /* Para asegurarse de que esté por encima de otros elementos */
+  }
+  
+  /* Contenedor del logo */
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 50px;
+    margin-right: 20px;
+  }
+  
+  /* Contenedor del contenido de navegación */
+  .navContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  
+  /* Lista de navegación */
+  .navList {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: center;
+  }
+  
+  .navList li {
+    margin: 0 15px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .navList li:hover {
+    color: #007BFF;
+  }
+  
+  /* Botón de acceso */
+  .accessBtn {
+    background-color: #333;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accessBtn:hover {
+    background-color: #555;
+  }
+  
+  /* Responsividad para pantallas medianas */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column; /* Coloca los elementos en columna */
+      align-items: flex-start;
+    }
+  
+    .navContent {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navList {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .navList li {
+      margin: 10px 0;
+      font-size: 14px; /* Reduce el tamaño de la fuente */
+    }
+  
+    .accessBtn {
+      margin-top: 10px;
+      align-self: center;
+      width: 100px;
+      padding: 10px;
+    }
+  }
+  
+  /* Responsividad para pantallas muy pequeñas (móviles) */
+  @media (max-width: 480px) {
+    .logo {
+      height: 40px; /* Reduce el tamaño del logo */
+    }
+  
+    .navList li {
+      font-size: 12px; /* Aún más pequeño para móviles */
+    }
+  
+    .accessBtn {
+      width: 90px;
+      padding: 8px;
+    }
+  }
+  

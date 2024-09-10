@@ -1,0 +1,84 @@
+/* Estilo para el contenedor del formulario */
+.registerContainer {
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrado horizontal */
+    margin: 10vh auto; /* Espaciado superior e inferior */
+    padding: 30px; /* Espaciado interno */
+    border-radius: 12px; /* Bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para el contenedor */
+    font-family: 'Arial', sans-serif; /* Fuente base */
+    transition: all 0.3s ease; /* Transición suave para animaciones */
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo del formulario */
+.registerForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre elementos del formulario */
+}
+
+/* Grupo de cada campo de entrada */
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo de las etiquetas */
+.formGroup label {
+    margin-bottom: 8px; /* Espacio debajo de la etiqueta */
+    font-weight: bold;
+    font-size: 14px; /* Tamaño de fuente de las etiquetas */
+    color: #333; /* Color de las etiquetas */
+}
+
+/* Estilo de los campos de entrada */
+.formGroup input {
+    padding: 12px; /* Espacio interno de los campos */
+    border: 1px solid #ddd; /* Borde ligero */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de fuente */
+    transition: border-color 0.3s ease; /* Transición para el cambio de color de borde */
+}
+
+/* Cambio de color del borde al enfocar un campo */
+.formGroup input:focus {
+    border-color: #1abc9c; /* Color del borde al enfocar */
+    outline: none; /* Sin borde adicional al enfocar */
+}
+
+/* Estilo del botón de envío */
+.submitButton {
+    padding: 12px 20px; /* Espacio interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #1abc9c; /* Color de fondo azul */
+    color: white; /* Texto blanco */
+    cursor: pointer; /* Icono de cursor de mano */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    transition: background-color 0.3s ease; /* Transición para cambio de color */
+}
+
+/* Estilo del botón al pasar el cursor */
+.submitButton:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro */
+}
+
+/* Media queries para hacerlo responsivo */
+@media (max-width: 480px) {
+    .registerContainer {
+        padding: 20px; /* Menor espaciado en pantallas pequeñas */
+        max-width: 90%; /* Ancho máximo ajustado */
+    }
+
+    .formGroup label {
+        font-size: 12px; /* Ajuste de tamaño de fuente en pantallas pequeñas */
+    }
+
+    .submitButton {
+        font-size: 14px; /* Ajuste del tamaño de fuente del botón */
+    }
+}

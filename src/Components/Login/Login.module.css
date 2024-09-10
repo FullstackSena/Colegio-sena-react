@@ -1,0 +1,166 @@
+/* Login.module.css */
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f9;
+  padding: 20px;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  margin-right: 40px;
+}
+
+.logo {
+  max-width: 30vh;
+  height: auto;
+}
+
+.loginForm {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid #7f7f7f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  width: 100%;
+  max-width: 400px;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.inputField {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f0f2f5;
+  font-size: 1rem;
+}
+
+.inputField:focus {
+  border-color: #1abc9c;
+  outline: none;
+  background-color: #e8eaf0;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #a5a5a5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #7f7f7f;
+}
+
+.linksContainer {
+  text-align: center;
+  padding: 20px;
+}
+
+.link {
+  display: inline-block;
+  margin: 10px 0;
+  color: #122c3e;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #1abc9c;
+}
+
+.responseMessage {
+  margin-top: 15px;
+  color: #1abc9c;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Responsivo para dispositivos móviles */
+@media (max-width: 768px) {
+  .loginContainer {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .logoContainer {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .logo {
+    max-width: 40vh;
+  }
+
+  .loginForm {
+    padding: 40px;
+    max-width: 100%;
+    margin: 20% 10% auto;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .submitButton {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .inputField {
+    padding: 10px;
+  }
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 480px) {
+  .loginForm {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .submitButton {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  .inputField {
+    padding: 8px;
+  }
+
+  .linksContainer {
+    padding: 15px;
+  }
+
+  .link {
+    font-size: 14px;
+  }
+}

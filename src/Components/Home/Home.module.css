@@ -1,0 +1,105 @@
+.homeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh 5vw; /* Espacio alrededor del contenedor */
+    gap: 5%; /* Espacio entre las secciones de texto e imagen */
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas si es necesario */
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+  }
+  
+  .textSection {
+    max-width: 40%;
+    text-align: center; /* Centra el texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    gap: 15px; /* Espacio entre el texto y los botones */
+    flex: 1; /* Permite que esta sección crezca y ocupe espacio disponible */
+    min-height: 50vh; /* Define una altura mínima para la sección de texto */
+    
+  }
+
+  .textSection h1 {
+    font-size: 5.5em;
+    margin-bottom: 5px;
+  }
+  
+  .textSection p {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    transition: background-color 0.3s ease; /* Añade una transición suave para el hover */
+  }
+  
+  .btn:hover {
+    background-color: #555;
+  }
+  
+  .imageSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex: 1; /* Permite que esta sección crezca */
+    text-align: center; /* Centra los elementos en su contenedor */
+    max-width: 80%; /* Limita el ancho máximo de la imagen */
+  }
+  
+  .studentImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .homeContainer {
+      flex-direction: column; /* Cambia la dirección del flex a columna en pantallas pequeñas */
+      padding: 5vh 2vw; /* Ajusta el padding para pantallas más pequeñas */
+    }
+  
+    .textSection {
+      max-width: 80%;
+      margin-bottom: 20px; /* Añade un margen inferior para separar el texto de la imagen */
+    }
+  
+    .imageSection {
+      max-width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .textSection h1 {
+      font-size: 2.5em;
+    }
+  
+    .textSection p {
+      font-size: 1em;
+    }
+  
+    .btn {
+      padding: 8px 15px;
+      font-size: 0.9em;
+    }
+  }
+  
+  
