@@ -80,39 +80,6 @@ const ManageStudents = () => {
         console.log(student._id); // Establece el estudiante en edición
     };
 
-    // Método para actualizar un estudiante
-    // const handleUpdate = async (e) => {
-    //     e.preventDefault();
-    //     if (!editingStudent) return; // Solo continúa si hay un estudiante en edición
-    //     setLoading(true);
-    //     setErrorMessage('');
-    //     try {
-    //         const response = await fetch(`${backAPI}/api/students/${editingStudent._id}/`, {
-    //             method: 'PUT',
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //             },
-    //             body: JSON.stringify(formData),
-    //         });
-
-    //         if (response.ok) {
-    //             const updatedStudent = await response.json();
-    //             setStudents(students.map(student =>
-    //                 student._id === editingStudent.id ? updatedStudent : student
-    //             ));
-    //             setFormData({ name: '', email: '', grade: '', id: '' });
-    //             setEditingStudent(null); // Salir del modo de edición
-    //         } else {
-    //             setErrorMessage('Error al actualizar el estudiante');
-    //         }
-    //     } catch (error) {
-    //         setErrorMessage('Error de red al actualizar el estudiante');
-    //     } finally {
-    //         setLoading(false);
-    //     }
-    // };
-
-
     const handleUpdate = async (e) => {
         e.preventDefault();
         if (!editingStudent) return;
@@ -223,7 +190,7 @@ const ManageStudents = () => {
                 {loading && <p className={styles.loadingMessage}>Procesando...</p>}
                 
                 <div className={styles.studentsList}>
-                    <h2 className={styles.subtitle}>Lista de estudiantes registrados</h2>
+                    <h2 className={styles.subtitle}>Lista de estudiantes registrados en la base de datos</h2>
                     <ul className={styles.list}>
                         {students.map((student) => (
                             <li key={student._id}  className={styles.listItem}>

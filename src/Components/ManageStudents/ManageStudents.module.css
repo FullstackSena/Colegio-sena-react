@@ -1,104 +1,215 @@
+/* Contenedor Principal */
 .manageStudentsContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    background-color: #f9f9f9;
+    justify-content: center; /* Alinea verticalmente */
+    max-width: 500px;
+    margin: 50px auto 0; /* Añade un margen superior */
+    padding: 40px;
+    background-color: #f7f7f7;
     border-radius: 8px;
-    max-width: 800px;
-    margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Título Principal */
 .title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
+    text-align: center;
     color: #333;
+}
+
+/* Mensajes de error */
+.errorMessage {
+    color: red;
+    font-size: 1.5rem;
     text-align: center;
 }
 
+/* Estilo del formulario */
 .manageStudentsForm {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
+/* Estilo de cada grupo de formulario */
 .formGroup {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+
 }
 
+/* Etiqueta de cada campo */
 .label {
-    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
     color: #555;
-    margin-bottom: 5px;
 }
 
+/* Campos de entrada */
 .input {
-    width: 100%;
     padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.2s;
 }
 
 .input:focus {
-    outline: none;
     border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
 }
 
+/* Botón de envío */
 .submitButton {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    padding: 10px 5px;
+    background-color: #5cc391;
+    color: white;
     border: none;
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    align-self: center;
+    transition: background-color 0.3s;
+    
 }
 
 .submitButton:hover {
     background-color: #0056b3;
 }
 
+.submitButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Mensaje de carga */
+.loadingMessage {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Lista de estudiantes */
 .studentsList {
-    margin-top: 40px;
-    width: 100%;
+    margin-top: 30px;
 }
 
 .subtitle {
     font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #333;
+    margin-bottom: 15px;
     text-align: center;
+    color: #333;
 }
 
 .list {
-    list-style: none;
+    list-style-type: none;
+
     padding: 0;
     margin: 0;
+
 }
 
 .listItem {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 15px;
-    margin-bottom: 10px;
+    background-color: white;
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .listItemText {
-    margin: 5px 0;
-    color: #333;
+    text-align: left!important;
+    margin: auto;
+    font-size: 1.2rem;
+    color: #223424;
 }
 
-.listItemText strong {
-    color: #555;
+/* Botones de la lista */
+.editButton,
+.deleteButton {
+    padding: 8px 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.editButton {
+    background-color: #5cc391;
+    color: white;
+}
+
+.editButton:hover {
+    background-color: #218838;
+}
+
+.editButton:disabled,
+.deleteButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.deleteButton {
+    background-color: #dc3545;
+    color: white;
+}
+
+.deleteButton:hover {
+    background-color: #c82333;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .manageStudentsContainer {
+        padding: 10px;
+    }
+
+    .formGroup {
+        flex-direction: column;
+    }
+
+    .listItem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .submitButton {
+        width: 100%;
+    }
+
+    .editButton,
+    .deleteButton {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title, .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .input {
+        font-size: 0.9rem;
+    }
+
+    .listItemText {
+        font-size: 0.9rem;
+    }
+
+    .editButton,
+    .deleteButton {
+        font-size: 0.85rem;
+    }
 }

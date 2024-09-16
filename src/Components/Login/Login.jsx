@@ -79,7 +79,7 @@ const Login = () => {
           <img src={loginImage} alt="SENA logo" className={styles.logo} />
         </div>
         <form onSubmit={handleSubmit} className={styles.loginForm}>
-          <h1 className={styles.title}>Ingreso</h1>
+          <h1 className={styles.title}>Ingreso como administrador:</h1>
           <div className={styles.formGroup}>
             <input
               type="text"

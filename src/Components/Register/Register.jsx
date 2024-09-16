@@ -53,7 +53,7 @@ const Register = () => {
     <div>
     <NavBar />
         <div className={styles.registerContainer}>
-            <h1 className={styles.title}>Registro de Usuario</h1>
+            <h1 className={styles.title}>Registro de Administrador</h1>
             <form onSubmit={handleSubmit} className={styles.registerForm}>
                 <div className={styles.formGroup}>
                     <label htmlFor="username" className={styles.label}>Nombre:</label>

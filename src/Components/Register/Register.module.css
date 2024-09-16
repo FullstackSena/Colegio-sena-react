@@ -1,6 +1,6 @@
 /* Estilo para el contenedor del formulario */
 .registerContainer {
-    max-width: 400px; /* Ancho máximo del formulario */
+    max-width: 500px; /* Ancho máximo del formulario */
     margin: 0 auto; /* Centrado horizontal */
     margin: 10vh auto; /* Espaciado superior e inferior */
     padding: 30px; /* Espaciado interno */
@@ -17,7 +17,7 @@
 .registerForm {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espacio entre elementos del formulario */
+    gap: 40px; /* Espacio entre elementos del formulario */
 }
 
 /* Grupo de cada campo de entrada */
@@ -25,7 +25,15 @@
     display: flex;
     flex-direction: column;
 }
+.title{
+    margin: 20px;
+    display: flex;/* Espaciado superior e inferior */
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem; /* Tamaño de fuente */
 
+    
+}
 /* Estilo de las etiquetas */
 .formGroup label {
     margin-bottom: 8px; /* Espacio debajo de la etiqueta */
