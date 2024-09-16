@@ -26,6 +26,11 @@ const Login = () => {
   const handleNavigate = () => {
     navigate("/register");
   }
+  const handleNavigateManageStudents = () => {
+    navigate("/managestudents");
+  }
+
+  
 
 
   // Manejador de envío de formulario utilizando async/await
@@ -52,6 +57,7 @@ const Login = () => {
         localStorage.setItem('token', data.token);
         console.log('Inicio de sesión exitoso:', data);
         setResponseMessage('Inicio de sesión exitoso');
+        navigate("/managestudents");
         // Aquí puedes redirigir al usuario o realizar otra acción después de un inicio de sesión exitoso
       } else {
         console.log('Error:', data);
